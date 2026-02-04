@@ -5,9 +5,11 @@ def build_signals():
         {"endpoint": "/pay", "latency_ms": 120, "status": 200},
         {"endpoint": "/pay", "latency_ms": 900, "status": 200},
         {"endpoint": "/pay", "latency_ms": 1500, "status": 500},
+        {"endpoint": "/pay", "latency_ms": 200, "status": 200},
         {"endpoint": "/login", "latency_ms": 80, "status": 200},
         {"endpoint": "/login", "latency_ms": 300, "status": 200},
-        {"endpoint": "/login", "latency_ms": 700, "status": 500},
+        {"endpoint": "/login", "latency_ms": 700, "status": 200},
+        {"endpoint": "/login", "latency_ms": 100, "status": 200},
     ]
     df = pd.DataFrame(data)
     df["is_error"] = df["status"] >= 500
